@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PankazLab</title>
+    <meta
+      name="description"
+      content="PankazLab — the research profile of Dr. Pankaj Singh Dholaniya."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./data.js"></script>
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="PankazLab home">
+          <img class="brand-logo" src="./assets/logo.svg" alt="" aria-hidden="true" />
+          <span class="brand-text">PankazLab</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#themes">Research</a>
+          <a href="#lab-members">Lab</a>
+          <a href="#publications">Publications</a>
+          <a href="#contact">Contact</a>
+          <a href="./admin.html">Admin</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow" id="hero-eyebrow">Research profile</p>
+            <h1 id="hero-title">PankazLab</h1>
+            <p class="lead" id="hero-lead"></p>
+            <p class="summary" id="hero-summary"></p>
+            <div class="hero-actions">
+              <a class="button button-primary" id="scholar-button" href="https://scholar.google.com/citations?user=h_tFfq8AAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+              <a class="button button-primary" id="linkedin-button" href="https://www.linkedin.com/in/pankaj-singh-dholaniya-ph-d-174b3914/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+          </div>
+
+          <aside class="hero-card">
+            <img
+              id="profile-photo"
+              src="./assets/profile.jpg"
+              alt="Portrait of Dr. Pankaj Singh Dholaniya"
+              class="portrait"
+            />
+            <div class="profile-meta">
+              <p class="meta-label">Name</p>
+              <p class="meta-value" id="profile-name"></p>
+
+              <p class="meta-label">Affiliation</p>
+              <p class="meta-value" id="profile-affiliation"></p>
+
+              <p class="meta-label">Email</p>
+              <p class="meta-value" id="profile-email"></p>
+            </div>
+          </aside>
+        </section>
+
+        <section class="stats-strip" id="stats-strip" aria-label="Research focus highlights"></section>
+
+        <section class="content-grid" id="about">
+          <article class="panel wide">
+            <p class="section-kicker">About</p>
+            <h2>Research focus</h2>
+            <div id="about-copy"></div>
+          </article>
+
+          <article class="panel">
+            <p class="section-kicker">Quick links</p>
+            <h2>Profile files</h2>
+            <ul class="link-list">
+              <li><a href="../Profile/Pankaj_Singh_Dholaniya_Research_Profile.docx">Word profile</a></li>
+              <li><a href="../Profile/Pankaj_Singh_CV_Full.docx">Full CV</a></li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="themes" class="section-block">
+          <div class="section-heading">
+            <p class="section-kicker">Research themes</p>
+            <h2>What PankazLab explores</h2>
+          </div>
+          <div class="theme-grid" id="theme-grid"></div>
+        </section>
+
+        <section id="lab-members" class="section-block">
+          <div class="section-heading">
+            <p class="section-kicker">Lab members</p>
+            <h2>Who is in the lab</h2>
+          </div>
+          <div class="member-group">
+            <div class="member-section">
+              <h3>Current members</h3>
+              <div class="member-grid" id="member-current-grid"></div>
+            </div>
+            <div class="member-section">
+              <h3>Past members</h3>
+              <div class="member-grid" id="member-past-grid"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="publications" class="section-block">
+          <div class="section-heading">
+            <p class="section-kicker">Selected publications</p>
+            <h2>Recent work</h2>
+          </div>
+          <div class="publication-list" id="publication-list"></div>
+        </section>
+
+        <section class="section-block split" id="contact">
+          <article class="panel">
+            <p class="section-kicker">Academic highlights</p>
+            <h2>Education</h2>
+            <ul class="compact-list">
+              <li>Ph.D. in Biotechnology, University of Hyderabad, 2017</li>
+              <li>M.Tech. in Bioinformatics, University of Hyderabad, 2011</li>
+              <li>B.Tech. in Biotechnology, SVBP University of Agriculture &amp; Technology, 2009</li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <p class="section-kicker">Contact</p>
+            <h2>Connect with the lab</h2>
+            <p>
+              Email: <a id="contact-email-link" href="mailto:pankaz@uohyd.ac.in">pankaz@uohyd.ac.in</a><br />
+              Scholar: <a id="contact-scholar-link" href="https://scholar.google.com/citations?user=h_tFfq8AAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar profile</a><br />
+              LinkedIn: <a id="contact-linkedin-link" href="https://www.linkedin.com/in/pankaj-singh-dholaniya-ph-d-174b3914/" target="_blank" rel="noreferrer">LinkedIn profile</a>
+            </p>
+            <p class="muted">
+              This website presents the updated research profile for Dr. Pankaj Singh Dholaniya.
+            </p>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© <span id="year"></span> PankazLab</p>
+      </footer>
+    </div>
+  </body>
+</html>
