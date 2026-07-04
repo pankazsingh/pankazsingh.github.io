@@ -67,13 +67,9 @@
   }
 
   function renderProfileSection(data) {
-    const affiliationLines = data.profile.affiliationLines.join('
-');
-    const aboutParagraphs = data.about.join('
-
-');
-    const stats = data.stats.join('
-');
+    const affiliationLines = data.profile.affiliationLines.join('\n');
+    const aboutParagraphs = data.about.join('\n\n');
+    const stats = data.stats.join('\n');
 
     return `
       <section class="form-panel">
@@ -206,8 +202,7 @@
   function readLines(name) {
     const value = form.elements[name].value || '';
     return value
-      .split(/
-+/)
+      .split(/\n+/)
       .map((line) => line.trim())
       .filter(Boolean);
   }
@@ -215,9 +210,7 @@
   function readParagraphs(name) {
     const value = form.elements[name].value || '';
     return value
-      .split(/
-\s*
-+/)
+      .split(/\n\s*\n+/)
       .map((paragraph) => paragraph.trim())
       .filter(Boolean);
   }
@@ -347,15 +340,11 @@
     form.elements.linkedinUrl.value = data.profile.linkedinUrl;
     form.elements.profileImage.value = data.profile.profileImage;
     form.elements.logoImage.value = data.profile.logoImage;
-    form.elements.profileAffiliationLines.value = data.profile.affiliationLines.join('
-');
+    form.elements.profileAffiliationLines.value = data.profile.affiliationLines.join('\n');
     form.elements.heroLead.value = data.hero.lead;
     form.elements.heroSummary.value = data.hero.summary;
-    form.elements.aboutParagraphs.value = data.about.join('
-
-');
-    form.elements.stats.value = data.stats.join('
-');
+    form.elements.aboutParagraphs.value = data.about.join('\n\n');
+    form.elements.stats.value = data.stats.join('\n');
   }
 
   form.addEventListener('submit', (event) => {
